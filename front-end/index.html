@@ -170,21 +170,25 @@
 								</td>
 							</tr>
 						</table>
+
 						<section>
 							<img src="images/wp/shop.png" alt="" data-position="25% 25%" id="wp_image" height=400 width=400/>
 							<div class="content">
 								<div class="inner">
+									<p>Distance d'utilisation efficace pour chaque arme </p>
 									<select name="weapon" id="wp" onchange="image_wp()">
 										<option value="shop" selected="selected">Choix de l'arme</option>
 									    <option value="AK47">AK47</option>
 									</select>
-									<img height=250 width=700 src="images/test.png" />
+									<center>
+										<img height=250 width=700 src="images/test.png" />
+									</center>
 								</div>
 							</div>
 							<script>
 								function image_wp() {
 								var img = document.getElementById("wp_image");
-								  img.src = "images/wp/AK47.png";
+								  img.src = "images/wp/"+document.getElementById("wp").value+".png";
 								}
 							</script>
 							
@@ -217,7 +221,7 @@
 							</center>
 							
 							<select name="type_map" id="type_map">
-								<option value="0" selected="selected"> </option>
+								<option value="0" selected="selected"> Données représentées </option>
 								<option value="1" >Lignes de tirs touchés avec l'arme choisie</option>
 								<option value="2">Position du tireur lors de tirs touchés avec l'arme choisie</option>
 								<option value="3">Position des victimes des tirs ennemis</option>
@@ -230,8 +234,39 @@
 					<section id="four" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2> La stratégie à adopter ? </h2>
+							<h3>Où planter la bombe ?</h3>
+							<p> Planter la bombe est un objectif important pour l'équipe Terrorist car il permet de gagner plus de crédits au round suivant et permet à l'équipe de se retrouver dans une position plus confortable. Il y a deux sites où l'on peut planter la bombe, et leur accessibilité va dépendre de l'économie des attaquants par rapport à celle des défenseurs.
+							<select name="type_map" id="type_map">
+								<option value="0" selected="selected"> Type de round </option>
+								<option value="1" >Eco</option>
+								<option value="2">Semi-Eco</option>
+								<option value="3">Force Buy</option>
+								<option value="4">Full Buy</option>
+							</select>
+							<table>
+								<tr>
+									<td>
+									<center>
+							      		<img height=300 width=400 src="images/test.png" />
+							      		<p>Site où la bombe a été plantée</p>		
+							      	</center>
+								</td>
+									<td>
+										<center>
+								      		<img height=300 width=400 src="images/test.png" />		
+								      		<p>Pourcentage de victoire par site où la bombe a été plantée</p>	
+								      	</center>
+									</td>
+								</tr>
+							</table>
+							<h3>Gestion de l'économie</h3>
+							<p>La gestion de l'économie est un aspect important de CSGO puisqu'une équipe ne pouvant acheter les meilleures armes à moins de chance de remporter le round. Il est donc préférable d'économiser de temps en temps en achetant rien que d'acheter tout le temps des armes moyennes.</p>
+							<center>
+					      		<img height=300 width=400 src="images/test.png" />
+							 </center>
 						</div>
 					</section>
+
 
 			</div>
 
