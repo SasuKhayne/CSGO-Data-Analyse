@@ -1,4 +1,7 @@
-data = FileAttachment("ligth2.csv").csv()
+data = $.csv.toArrays("./data/ligth.csv", {
+    delimiter: "'", 
+    separator: ';', // Sets a custom field separator character
+  });
 
 contours = (data, attr) => {
     var data_filtered = [];
