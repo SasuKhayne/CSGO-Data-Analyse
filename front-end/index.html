@@ -67,11 +67,11 @@
 							<ul class="actions">
 								<li>
 									<input type="radio" id="T" name="side" value="Terrorist" onchange="change_side()" checked/>
-									<label for="T"><img height=200 src="images/logo_side/T_logo.png" /><br> <center><strong><p style="background-color: white; color:#D37F21";>Terrorist</p></strong></center></label>
+									<label for="T"><img height=200 src="images/logo_side/T_logo.png" /><br> <center><strong><p style="text-shadow: 0px 0px 10px gray; color:#D37F21";>Terrorist</p></strong></center></label>
 								</li>
 								<li>
 									<input type="radio" id="CT" name="side" value="CounterTerrorist" onchange="change_side()" />
-									<label for="CT"><img height=200 src="images/logo_side/CT_logo.png" /> <br> <center><strong><p style="background-color: white; color:#2B53DE";>Counter-Terrorist</p></strong></center></label>
+									<label for="CT"><img height=200 src="images/logo_side/CT_logo.png" /> <br> <center><strong><p style="text-shadow: 0px 0px 10px grey; color:#2B53DE";>Counter-Terrorist</p></strong></center></label>
 								</li>
 							</ul>
 							<script>
@@ -286,7 +286,6 @@
 								var type_visu = document.getElementById("type_map").value;
 								if(type_visu==1 || type_visu==3){var attr = "att";}
 								else {var attr = "vic";}
-								console.log(attr);
 								}
 							</script>
 							
