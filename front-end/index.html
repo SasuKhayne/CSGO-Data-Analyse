@@ -66,69 +66,106 @@
 							<h1>Choix de l'équipe</h1>
 							<ul class="actions">
 								<li>
-									<input type="radio" id="T" name="side" value="Terrorist" checked/>
+									<input type="radio" id="T" name="side" value="Terrorist" onchange="change_side()" checked/>
 									<label for="T"><img height=200 src="images/logo_side/T_logo.png" /><br> <center><strong><p style="background-color: white; color:#D37F21";>Terrorist</p></strong></center></label>
 								</li>
 								<li>
-									<input type="radio" id="CT" name="side" value="Terrorist" />
+									<input type="radio" id="CT" name="side" value="CounterTerrorist" onchange="change_side()" />
 									<label for="CT"><img height=200 src="images/logo_side/CT_logo.png" /> <br> <center><strong><p style="background-color: white; color:#2B53DE";>Counter-Terrorist</p></strong></center></label>
 								</li>
 							</ul>
+							<script>
+								var side = document.querySelector('input[name="side"]:checked').value;
+								function change_side() {
+								var side = document.querySelector('input[name="side"]:checked').value;
+								}
+							</script>
 							<h1>Choix de la carte</h1>
 
-								<input type="radio" id="cache"  value="de_cache" name="map"checked/>
+								<input type="radio" id="cache"  value="de_cache" name="map" onchange="change_map()" checked/>
 									<label for="cache"><img height=150 src="images/logo_maps/cache_logo.png" /></label>
-								<input type="radio" id="cobble"  value="de_cbble" name="map"/>
+								<input type="radio" id="cobble"  value="de_cbble" name="map" onchange="change_map()"/>
 									<label for="cobble"><img height=150 src="images/logo_maps/cobble_logo.png" /></label>
-								<input type="radio" id="dust"  value="de_dust2" name="map"/>
+								<input type="radio" id="dust"  value="de_dust2" name="map" onchange="change_map()"/>
 									<label for="dust"><img height=150 src="images/logo_maps/dust_logo.png" /></label>
 								<br>
-								<input type="radio" id="inferno"  value="de_inferno" name="map"/>
+								<input type="radio" id="inferno"  value="de_inferno" name="map" onchange="change_map()"/>
 									<label for="inferno"><img height=150 src="images/logo_maps/inferno_logo.png" /></label>
-								<input type="radio" id="mirage"  value="de_mirage" name="map"/>
+								<input type="radio" id="mirage"  value="de_mirage" name="map" onchange="change_map()"/>
 									<label for="mirage"><img height=150 src="images/logo_maps/mirage_logo.png" /></label>
-								<input type="radio" id="overpass"  value="de_overpass" name="map"/>
+								<input type="radio" id="overpass"  value="de_overpass" name="map" onchange="change_map()"/>
 									<label for="overpass"><img height=150 src="images/logo_maps/overpass_logo.png" /></label>
-								<input type="radio" id="train"  value="de_train" name="map"/>
+								<input type="radio" id="train"  value="de_train" name="map" onchange="change_map()"/>
 									<label for="train"><img height=150 src="images/logo_maps/train_logo.png" /></label>
 								
+								<script>
+									var map = document.querySelector('input[name="map"]:checked').value;
+									function change_map() {
+									var map = document.querySelector('input[name="map"]:checked').value;
+									}
+								</script>
 							<h1>Choix des rangs à observer</h1>
-							<input type="checkbox" id="s1"  value="1" name="rank" checked/>
+							<input type="checkbox" id="s1"  value="1" name="rank" onchange="change_rank()" onchange="change_rank()" checked/>
 									<label for="s1"><img height=75 width=150 src="images/logo_ranks/s1_logo.jpg" /><br> <center>Silver 1</center></label>
-							<input type="checkbox" id="s2"  value="2" name="rank" checked/>
+							<input type="checkbox" id="s2"  value="2" name="rank" onchange="change_rank()" checked/>
 									<label for="s2"><img height=75 width=150 src="images/logo_ranks/s2_logo.jpg" /><br> <center>Silver 2</center></label>
-							<input type="checkbox" id="s3"  value="3" name="rank" checked/>
+							<input type="checkbox" id="s3"  value="3" name="rank" onchange="change_rank()" checked/>
 									<label for="s3"><img height=75 width=150 src="images/logo_ranks/s3_logo.jpg" /><br> <center>Silver 3</center></label>
-							<input type="checkbox" id="s4"  value="4" name="rank" checked/>
-									<label for="s1"><img height=75 width=150 src="images/logo_ranks/s4_logo.jpg" /><br> <center>Silver 4</center></label>
-							<input type="checkbox" id="s5"  value="5" name="rank" checked/>
-									<label for="s1"><img height=75 width=150 src="images/logo_ranks/s5_logo.jpg" /><br> <center>Silver 5</center></label>	
-							<input type="checkbox" id="se"  value="6" name="rank" checked/>
-									<label for="s1"><img height=75 width=150 src="images/logo_ranks/se_logo.jpg" /><br> <center>Silver Elite</center></label>
-							<input type="checkbox" id="g1"  value="7" name="rank" checked/>
+							<input type="checkbox" id="s4"  value="4" name="rank" onchange="change_rank()" checked/>
+									<label for="s4"><img height=75 width=150 src="images/logo_ranks/s4_logo.jpg" /><br> <center>Silver 4</center></label>
+							<input type="checkbox" id="s5"  value="5" name="rank" onchange="change_rank()" checked/>
+									<label for="s5"><img height=75 width=150 src="images/logo_ranks/s5_logo.jpg" /><br> <center>Silver 5</center></label>	
+							<input type="checkbox" id="se"  value="6" name="rank" onchange="change_rank()" checked/>
+									<label for="se"><img height=75 width=150 src="images/logo_ranks/se_logo.jpg" /><br> <center>Silver Elite</center></label>
+							<input type="checkbox" id="g1"  value="7" name="rank" onchange="change_rank()" checked/>
 									<label for="g1"><img height=75 width=150 src="images/logo_ranks/g1_logo.jpg" /><br> <center>Gold Nova 1</center></label>
-							<input type="checkbox" id="g2"  value="8" name="rank" checked/>
+							<input type="checkbox" id="g2"  value="8" name="rank" onchange="change_rank()" checked/>
 									<label for="g2"><img height=75 width=150 src="images/logo_ranks/g2_logo.jpg" /><br> <center>Gold Nova 2</center></label>
-							<input type="checkbox" id="g3"  value="9" name="rank" checked/>
+							<input type="checkbox" id="g3"  value="9" name="rank" onchange="change_rank()" checked/>
 									<label for="g3"><img height=75 width=150 src="images/logo_ranks/g3_logo.jpg" /><br> <center>Gold Nova 3</center></label>
-							<input type="checkbox" id="g4"  value="10" name="rank" checked/>
+							<input type="checkbox" id="g4"  value="10" name="rank" onchange="change_rank()" checked/>
 									<label for="g4"><img height=75 width=150 src="images/logo_ranks/g4_logo.jpg" /><br> <center>Gold Nova Master</center></label>
-							<input type="checkbox" id="mg1"  value="11" name="rank" checked/>
+							<input type="checkbox" id="mg1"  value="11" name="rank" onchange="change_rank()" checked/>
 									<label for="mg"><img height=75 width=150 src="images/logo_ranks/mg_logo.jpg" /><br> <center>MG 1</center></label>
-							<input type="checkbox" id="mg2"  value="12" name="rank" checked/>
+							<input type="checkbox" id="mg2"  value="12" name="rank" onchange="change_rank()" checked/>
 									<label for="mg2"><img height=75 width=150 src="images/logo_ranks/mge_logo.jpg" /><br> <center>MG 2</center></label>
-							<input type="checkbox" id="mge"  value="13" name="rank" checked/>
+							<input type="checkbox" id="mge"  value="13" name="rank" onchange="change_rank()" checked/>
 									<label for="mge"><img height=75 width=150 src="images/logo_ranks/mgee_logo.jpg" /><br> <center>MG Elite</center></label>
-							<input type="checkbox" id="dmge"  value="14" name="rank" checked/>
+							<input type="checkbox" id="dmge"  value="14" name="rank" onchange="change_rank()" checked/>
 									<label for="dmge"><img height=75 width=150 src="images/logo_ranks/e_logo.jpg" /><br> <center>DMGE</center></label>
-							<input type="checkbox" id="le"  value="15" name="rank" checked/>
+							<input type="checkbox" id="le"  value="15" name="rank" onchange="change_rank()" checked/>
 									<label for="le"><img height=75 width=150 src="images/logo_ranks/le_logo.jpg" /><br> <center>Legendary Eagle</center></label>
-							<input type="checkbox" id="lem"  value="16" name="rank" checked/>
+							<input type="checkbox" id="lem"  value="16" name="rank" onchange="change_rank()" checked/>
 									<label for="lem"><img height=75 width=150 src="images/logo_ranks/lem_logo.jpg" /><br> <center>LE Master</center></label>
-							<input type="checkbox" id="sm"  value="17" name="rank" checked/>
+							<input type="checkbox" id="sm"  value="17" name="rank" onchange="change_rank()" checked/>
 									<label for="sm"><img height=75 width=150 src="images/logo_ranks/sm_logo.jpg" /><br> <center>Supreme M</center></label>
-							<input type="checkbox" id="ge"  value="18" name="rank" checked/>
+							<input type="checkbox" id="ge"  value="18" name="rank" onchange="change_rank()" checked/>
 									<label for="ge"><img height=75 width=150 src="images/logo_ranks/gom_logo.jpg" /><br> <center>Global Elite</center></label>
+							<script>
+								var checkboxes = document.getElementsByName("rank");
+								var checkboxesChecked = [];
+								// loop over them all
+								for (var i=0; i<checkboxes.length; i++) {
+									// And stick the checked ones onto an array...
+									if (checkboxes[i].checked) {
+										checkboxesChecked.push(checkboxes[i]);
+									}
+								}
+								var rank = checkboxesChecked;
+								function change_rank() {
+									var checkboxes = document.getElementsByName("rank");
+									var checkboxesChecked = [];
+									// loop over them all
+									for (var i=0; i<checkboxes.length; i++) {
+										// And stick the checked ones onto an array...
+										if (checkboxes[i].checked) {
+										checkboxesChecked.push(checkboxes[i].value);
+										}
+									}
+								var rank = checkboxesChecked;
+								console.log(rank);
+								}
+							</script>
 						</div>
 					</section>
 
@@ -264,7 +301,7 @@
 							<p>La gestion de l'économie est un aspect important de CSGO puisqu'une équipe ne pouvant acheter les meilleures armes à moins de chance de remporter le round. Il est donc préférable d'économiser de temps en temps en achetant rien que d'acheter tout le temps des armes moyennes.</p>
 							<center>
 					      		<img height=300 width=400 src="images/test.png" />
-							 </center>
+							</center>
 						</div>
 					</section>
 
@@ -289,7 +326,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			<script src="scripts/script.js"></script>
+			<!--<script src="scripts/script.js"></script> -->
 
 	</body>
 </html>
